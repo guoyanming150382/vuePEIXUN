@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ppp></ppp>
+	</div>
+	<script type="text/javascript">
+		Vue.component('ppp',{
+			data:function(){
+				return {
+					msg:'1111而巨额'
+				}
+			},
+			template:'<p>爱仕达多撒所{{msg}}</p>'
+		})
+		var App=new Vue({
+			el:'#app',
+			data:{
+
+			},
+			methods:{
+
+			}
+		})
+	</script>
+</body>
+</html>

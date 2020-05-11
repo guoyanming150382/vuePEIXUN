@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<com-box @func="loadComments"></com-box>
+			<div id="comment">
+				<ul>
+					<li v-for="item in list">{{item.user}}----{{item.content}}{{item.id}}</li>
+				</ul>
+			</div>
+		</div>
+		<template id="tmpl">
+			<div>
+	      <div class="form-group">
+	        <label>评论人：</label>
+	        <input type="text" class="form-control" v-model="user">
+	      </div>
+	
+	      <div class="form-group">
+	        <label>评论内容：</label>
+	        <textarea class="form-control" v-model="content"></textarea>
+	      </div>
+	      <div class="form-group">
+	        <input type="button" value="发表评论" class="btn btn-primary" @click="postComment">
+	      </div>
+	    </div>
+		</template>
+		<script>
+			var commentBox={
+				data(){
+					return {
+	          user: '',
+	          content: ''
+	        }
+				},
+				template:'#tmpl',
+				methods:{
+					postComment(){
+						var comment = { id: Date.now(), user: this.user, content: this.content }
+						console.log(comment)
+						this.$emit('func',JSON.stringify(comment))
+						this.user = this.content = ''
+					}
+				}
+			}
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					list: [
+	          { id: Date.now(), user: '李白', content: '天生我材必有用' },
+	          { id: Date.now(), user: '江小白', content: '劝君更尽一杯酒' },
+	          { id: Date.now(), user: '小马', content: '我姓马， 风吹草低见牛羊的马' }
+	        ]
+				},
+				components:{
+					'com-box':commentBox
+				},
+				methods:{
+					loadComments(data){
+						var obj = JSON.parse(data)
+						this.list.unshift(obj)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

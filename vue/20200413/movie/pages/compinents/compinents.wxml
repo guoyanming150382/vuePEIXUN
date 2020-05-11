@@ -1,0 +1,16 @@
+<!--pages/compinents/compinents.wxml-->
+<template name="indexpost">
+      <view class="word1">
+			<image src="{{item.avatar}}"></image>
+			<text class="w1">{{item.date}}</text>
+		</view>
+		<view class="title">{{item.title}}</view>
+		<image src="{{item.imgSrc}}" class="showpicu"></image>
+		<text class="txt">{{item.content}}</text>
+		<view class="talk">
+			<image src="/images/icon/chat.png"></image>
+			<text style="margin-right:20px;">{{item.collection}}</text>
+			<image src="/images/icon/view.png" ></image>
+			<text>{{item.reading}}</text>
+		</view>
+</template>

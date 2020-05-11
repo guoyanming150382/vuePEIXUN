@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		
+		++{{old}}++
+		<dao @func="show">点击</dao>
+	</div>
+	<script type="text/javascript">
+		// var arr=[]
+		// arr[0]="a"
+		// arr[1]="b"
+		// arr.too="c"
+		// console.log(arr)
+		// console.log(arr.length)//2
+		// console.log(arr.too.length)//1
+		var dao={
+			data(){
+				return{
+					name:"asdd"
+				}
+				
+			},
+			methods:{
+				myD(){
+					this.$emit('func',this.name)
+				}
+			},
+			template:"<button @click='myD'>点击</button>"
+		}
+		var App=new Vue({
+			el:"#app",
+			data:{
+				old:'4554'
+			},
+			methods:{
+				show(data){
+					this.old=data
+				}
+			},
+			components:{
+				dao:dao
+			}
+		})
+	</script>
+</body>
+</html>

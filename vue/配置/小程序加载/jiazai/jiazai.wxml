@@ -1,0 +1,8 @@
+<!-- 上拉加载 -->
+<view class='item_wrap'>
+	<block wx:for="{{list_all}}" wx:key="key">
+		<view class='item_lis'>
+			<text>{{item}}</text>
+		</view>
+	</block>
+</view>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input v-model="issue_content" v-on:input ="inputFunc" type="text" placeholder="如何修改密码">
+
+		<div class="serch_result" v-show="serch_result_issue">
+			<li v-for="item in searchData">
+				{{ item.name }}
+			</li>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var App=new Vue({
+			el:"#app",
+			data:{
+				 issue_content:"",//输入框中的内容
+			      serch_result_issue:false,//控制搜索的问题显示隐藏
+			      serch_result:[
+				      {name:"忘记了密码怎么办?"},
+				      {name:"如何成为星签约者"},
+				      {name:"什么样的文章能够被星官方推荐"},
+				      {name:"我在哪里可以找到自己发布的文章"},
+				      {name:"忘记了密码怎么办"}
+			      ]
+			  },
+			  methods:{
+			  	inputFunc(){
+			  		if(this.issue_content.length>0){
+			  			this.serch_result_issue = true;
+			  		}else{
+			  			this.serch_result_issue = false
+			  		}
+			  	}
+			  },
+			  computed: {
+			  	searchData() {
+			  		var issue_content = this.issue_content;
+			  		if (issue_content) {
+			  			return this.serch_result.filter(function(product) {
+			  				return Object.keys(product).some(function(key) {
+			  					return String(product[key]).toLowerCase().indexOf(issue_content) > -1
+			  				})
+			  			})
+			  		}
+			  		return this.products;
+			  	}
+			  }
+})
+</script>
+</body>
+</html>

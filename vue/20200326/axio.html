@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdn.bootcss.com/axios/0.19.2/axios.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<button @click="getdata">点击</button>
+	</div>
+	<script type="text/javascript">
+		var APP=new Vue({
+			el:"#app",
+			data:{
+
+			},
+			methods:{
+				getdata(){
+					axios.get('http://127.0.0.1:3000/list').then((res)=>{
+						console.log(res)
+					})
+				}
+			}
+		})
+	</script>
+</body>
+</html>

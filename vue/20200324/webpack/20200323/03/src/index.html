@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--不推荐直接在这里引入任何包和css,会发起二次请求-->
+		<!--<script src="../dist/boundle.js"></script>-->
+		<script src="/boundle.js"></script>
+		<!--
+			因为main中的代码，设计到了es6新语法，但是浏览器不识别
+			script src="./main.js"
+			通过webpack这个一个前端构建工具，把main.js做了以下处理，生成了一个
+			bundle.js文件
+			经过刚才的演示，webpack可以在一个js中引入其他js代码
+		-->
+	</head>
+	<body>
+		<ul>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+			<li>11111111</li>
+		</ul>
+	</body>
+</html>

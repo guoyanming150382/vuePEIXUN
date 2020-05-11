@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<test></test>
+		</div>
+		<script>
+			// 全局定义组件
+//			Vue.component('test',Vue.extend({}))
+			var component={
+				data(){
+					return{
+						msg:'我是一段描述'
+					}
+				},
+				template:"<h3>我是将要被创建出来组件{{msg}}</h3>"
+			}
+			Vue.component('test',component)
+			var vm=new Vue({
+				el:'#app',
+				data:{}
+			})
+		</script>
+	</body>
+</html>

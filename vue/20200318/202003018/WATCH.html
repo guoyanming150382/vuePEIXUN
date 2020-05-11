@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		1:<input type="text" v-model="first"> 2:<input type="text" v-model="second"><br>
+		<input type="text" v-model="all">
+	</div>
+	<script type="text/javascript">
+		var APp=new Vue({
+			el:'#app',
+			data:{
+				first:'',second:'',all:''
+			},
+			watch:{
+				first(one,two){
+					this.all=one+this.second
+				},
+				second(one,two){
+					this.all=this.first+two
+				}
+			}
+		})
+	</script>
+</body>
+</html>

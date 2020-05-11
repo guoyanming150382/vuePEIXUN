@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<mycom :title="msg" :user="userinfo"></mycom>
+		</div>
+		<script>
+			Vue.component('mycom',{
+				props:['title','user'],
+				template:"<h3>我是h3标题{{title}}{{user.name}}</h3>"
+			})
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					msg:'我是一段描述',
+					userinfo:{
+						name:'xxx',
+						age:'xxxx'
+					}
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>

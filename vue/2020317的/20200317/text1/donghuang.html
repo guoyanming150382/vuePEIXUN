@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.ball{
+			width: 50px;height: 50px;
+			background: red;
+		}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<button v-on:click="flag=!flag">点击</button>
+		<transition @before-enter="beforeenter" @enter="enter" @after-enter="afterenter" >
+			<div class='ball' v-show="flag"></div>
+		</transition>
+	</div>
+	<script type="text/javascript">
+		var PP=new Vue({
+			el:'#app',
+			data:{
+				flag:false
+			},
+			methods:{
+				beforeenter(el){
+					el.style.transform="translate(0,0)"
+				},
+				enter(el,done){
+					el.offsetWidth
+
+					el.style.transform="translate(160px,130px)"
+					el.style.transition="all 1s linear"
+					done()
+				},
+				afterenter(el){
+					this.flag=!this.flag
+				}
+			}
+		})
+	</script>
+</body>
+</html>

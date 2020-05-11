@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<bire></bire>
+	</div>
+	<script type="text/javascript">
+		Vue.component('bire',{
+			msg:["还是大号"],
+			template:"<div>按季度交按揭{{msg}}</div>"
+		})
+
+		var App=new Vue({
+			el:'#app',
+			data:{},
+			methods:{
+
+			}
+		})
+	</script>
+</body>
+</html>

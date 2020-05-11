@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/first/first",
+    "pages/compinents/compinents",
+    "pages/move/move-list/move-list",
+    "pages/move/move",
+    "pages/move/all-son/all-son",
+    "pages/move/move-more/move-more",
+    "pages/move/searchMovie/searchMovie",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "MOVIES",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "borderStyle":"white",
+    "position":"bottom",
+    "color":"#f00",
+    "selectedColor":"#1296db",
+    "list":[
+        {
+          "pagePath":"pages/first/first",
+          "text":"首页",
+          "iconPath":"images/index.png",
+          "selectedIconPath":"images/index1.png"
+        },
+        {
+          "pagePath":"pages/move/move",
+          "text":"影视",
+          "iconPath":"images/mine.png",
+          "selectedIconPath":"images/mine1.png"
+        }
+    ]
+}
+}

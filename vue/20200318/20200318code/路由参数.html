@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue-router/3.1.2/vue-router.min.js"></script>
+		<style>
+			.router-link-active,.myactive {
+      color: red;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 80px;
+      text-decoration: underline;
+      background-color: green;
+    }
+			.v-enter,.v-leave-to {
+	      opacity: 0;
+	      transform: translateX(140px);
+	    }
+
+	    .v-enter-active,.v-leave-active {
+	      transition: all 0.5s ease;
+	    }
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<router-link to="/login?id=10&name=张三" tag="a">登录</router-link>
+    	<router-link to="/register">注册</router-link>
+    	<transition mode="out-in">
+    		<router-view></router-view>
+			</transition>
+		</div>
+		<script>
+			// 定义login
+			var login = {
+	      template: '<h1>登录组件{{ $route.query.id }}---{{ $route.query.name }}</h1>'
+	    }
+			//定义register
+	    var register = {
+	      template: '<h1>注册组件</h1>'
+	    }
+	    //创建一个路由实例
+	    var routerObj=new VueRouter({
+	    	routes:[
+	    		{ path: '/', redirect: '/register' },
+	    		{path:'/login',component:login},
+	    		{ path: '/register', component: register }
+	    	],
+	    	linkActiveClass: 'myactive'   // 当前路由添加myactive样式
+	    })
+			var vm=new Vue({
+				el:'#app',
+				created(){
+					console.log(this.$route)
+				},
+				router:routerObj,
+			})
+		</script>
+	</body>
+</html>

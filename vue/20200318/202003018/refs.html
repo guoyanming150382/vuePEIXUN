@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div id="o1" ref="o1">asdas</div>
+		<login id="pp1" ref="pp1"></login>
+	</div>
+	<script type="text/javascript">
+		var login={
+			template:"<p>第三方</p>",
+			data(){
+				return{
+					"user":"阿斯达的"
+				}
+			}
+		}
+
+		var App=new Vue({
+			el:'#app',
+			data:{
+
+			},
+			methods:{
+
+			},
+			components:{
+				login:login
+			},
+			mounted(){
+				console.log(this.$refs.o1.innerHTML)
+				console.log(this.$refs.pp1.user)
+			}
+		})
+	</script>
+</body>
+</html>

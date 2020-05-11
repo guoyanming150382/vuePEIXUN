@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<xxxcom></xxxcom>
+		</div>
+		<script>
+			// 全局定义组件
+			Vue.component('xxxcom',Vue.extend({
+	      template: '<h3>这是使用 Vue.extend 创建的组件</h3>'
+	    }))
+			var vm=new Vue({
+				el:'#app',
+				data:{}
+			})
+		</script>
+	</body>
+</html>

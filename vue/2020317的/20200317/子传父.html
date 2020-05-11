@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<child></child>
+	</div>
+	<script type="text/javascript">
+		var child={
+			props:=['user'],
+			data:function(){
+
+			},
+			template:'',
+			methods:{
+
+			}
+		}
+
+		var App= new Vue({
+			el:'#app',
+			data:{
+				name:'968'
+			},
+			methods:{
+
+			},
+			compontents:{
+				child:child
+			}
+		})
+	</script>
+</body>
+</html>

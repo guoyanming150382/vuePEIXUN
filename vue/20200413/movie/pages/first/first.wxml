@@ -1,0 +1,14 @@
+<!--pages/first/first.wxml-->
+<import src="/pages/compinents/compinents.wxml" />
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" circular="{{circular}}" class="swiperTop">
+	<block wx:for="{{arr}}" wx:key="item" >
+		<swiper-item data-postId="{{item.postId}}" catchtap="postSend">
+			<image src="{{item.headImgSrc}}"></image>
+		</swiper-item>
+	</block>
+</swiper>
+<view wx:for="{{arr}}" wx:key="key" >
+	<view class="showcontent" data-postId="{{item.postId}}" catchtap="postSend">
+		<template is="indexpost" data="{{item}}"></template>
+	</view>
+</view>

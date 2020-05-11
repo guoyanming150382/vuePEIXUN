@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="firstname"/>
+			<input type="text" v-model="lastname"/>
+			<input type="text" v-model="fullname"/>
+		</div>
+		<script>
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					firstname:'',
+					lastname:'',
+					fullname:''
+				},
+				watch:{
+					'firstname':function(newVal,oldVal){
+						this.fullname=newVal+''+this.lastname
+					},
+					'lastname':function(newVal,oldVal){
+						this.fullname=this.firstname+''+newVal
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

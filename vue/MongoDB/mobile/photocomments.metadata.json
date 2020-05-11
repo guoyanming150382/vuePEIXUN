@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"mobile.photocomments"},{"v":2,"key":{"comments.comId":1},"name":"comments.comId_1","ns":"mobile.photocomments"}],"uuid":"52095113faa54de487b4f414d9c47ec7"}

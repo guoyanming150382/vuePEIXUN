@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<mycom></mycom>
+		</div>
+		<script>
+			Vue.component('mycom',{
+				template:"<h3 @click='change'>我是h3标题{{name}}
+					return{
+						name:'张三'
+					}
+				},
+				methods:{
+					change(){
+						this.name='xxxx'
+					}
+				}
+			})
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					msg:'我是一段描述'
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>

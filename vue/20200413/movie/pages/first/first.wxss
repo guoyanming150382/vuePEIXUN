@@ -1,0 +1,5 @@
+/* pages/first/first.wxss */
+@import "/pages/compinents/compinents.wxss";
+.swiperTop{
+      height: 400rpx;
+}

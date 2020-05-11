@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<input id="fileSelector" type="file" name="filename">
+	<input id="submitBtn" type="button" οnclick="test()" value="提交">
+	<img src="" id="img0" class="img-thumbnail"> 
+	<script>
+		$.ajax({
+			url:'https://svc.xmpeihu.com:8443/cos/getKey',
+			dataType:'json',
+			type:'post',
+			success:function(res){
+				console.log(res)
+			}
+		})
+
+		var selectedFile;	
+		var filename;
+		$("#fileSelector").change(function(){  
+			selectedFile = document.getElementById('fileSelector').files[0];
+			filename = selectedFile.name;
+		}); 
+	</script>
+</body>
+</html>

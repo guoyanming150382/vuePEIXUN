@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="firstname"/>
+			<input type="text" v-model="lastname"/> <br />
+			<input type="text" v-model="fullname" />
+			<p>{{fullname}}</p>
+		</div>
+		<script>
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					firstname:'',
+					lastname:'',
+					fullname:''
+				},
+				watch:{
+					// 第一个参数指的是新值，第二个参数指的是旧值
+					'firstname':function(newVal,oldVal){
+						this.fullname=newVal+''+this.lastname
+					},
+					'lastname':function(newVal,oldVal){
+						this.fullname=this.firstname+''+newVal
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

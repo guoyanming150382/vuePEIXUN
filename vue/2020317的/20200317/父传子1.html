@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<child :yu="msg"></child>
+	</div>
+	<script type="text/javascript">
+		var child={
+			props:['yu'],
+			template:'<h1>阿斯达大多{{yu}}</h1>'
+		}
+
+		var App=new Vue({
+			el:'#app',
+			data:{
+				msg:'hello'
+			},
+			methods:{
+
+			},
+			components:{
+				child:child
+			}
+		})
+
+	</script>
+</body>
+</html>

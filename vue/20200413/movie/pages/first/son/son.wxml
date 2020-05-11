@@ -1,0 +1,33 @@
+<view class="topImg">
+      <image class="top-img" src="{{isImgStire?arr.music.coverImg:arr.headImgSrc}}"></image>
+     <view class="btn" catchtap="dainbtn" ><image class="playButton" src="{{isImgStire?stop:play}}"></image></view> 
+</view>
+<!-- 收藏分享 -->
+<view class="collection">
+      <image wx:if="{{tuCollect}}" src="/images/icon/collection.png" catchtap="iscollection" ></image>
+	<image wx:else src="/images/icon/collection-anti.png" catchtap="iscollection" ></image>
+      <image src="/images/icon/share.png" catchtap="onShareTap"></image>
+</view>
+<view>
+	<view class="showcontent" data-postId="{{arr.postId}}" catchtap="postSend">
+		<view class="word1">
+			<image src="{{arr.avatar}}"></image>
+			<text class="w1">{{arr.date}}</text>
+		</view>
+		<view class="title">{{arr.title}}</view>
+		<image src="{{arr.imgSrc}}" class="showpicu"></image>
+		<text class="txt">{{arr.detail}}</text>
+		<view class="talk">
+			<image src="/images/icon/chat.png"></image>
+			<text style="margin-right:20px;">{{arr.collection}}</text>
+			<image src="/images/icon/view.png"></image>
+			<text>{{arr.reading}}</text>
+		</view>
+	</view>
+</view>
+<button catchtap="zhuanfa" data-postId="{{arr.postId}}">分享1</button>
+<button catchtap="zhuanfa1" data-postId="{{arr.postId}}">分享2</button>
+<button open-type='share'>分享3</button>
+
+<!-- 音乐 -->
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop style="display:none"></audio>

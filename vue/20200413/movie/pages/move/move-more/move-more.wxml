@@ -1,0 +1,17 @@
+<view class="moviesClass "  id="quanbu"> 
+      <view class="movieFenShow">
+                  <view class="movie-show shang" wx:for="{{moreMovie.subjects}}" wx:key="item" data-id="{{item.id}}" catchtap="jumpSon">
+                        <image src="{{item.images.large}}"></image>
+                        <view class="shenglue">{{item.original_title}}</view>
+                        <view class="allstart">
+                              <!-- 星星 -->
+                              <view class="start-show" class="{{ ((50-item.rating.stars)>=50) ? 'hei' : 'huang' }}"></view>
+                              <view class="start-show" class="{{ ((50-item.rating.stars)>=40) ? 'hei' : 'huang' }}"></view>
+                              <view class="start-show" class="{{ ((50-item.rating.stars)>=30) ? 'hei' : 'huang' }}"></view>
+                              <view class="start-show" class="{{ ((50-item.rating.stars)>=20) ? 'hei' : 'huang' }}"></view>
+                              <view class="start-show" class="{{ ((50-item.rating.stars)>=10) ? 'hei' : 'huang' }}"></view>
+                              <view class="pingfen">{{item.rating.average}}</view>
+                        </view>
+                  </view>
+            </view>
+</view>

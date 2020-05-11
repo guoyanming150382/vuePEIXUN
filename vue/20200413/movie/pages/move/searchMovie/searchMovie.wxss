@@ -1,0 +1,112 @@
+/* pages/move/searchMovie/searchMovie.wxss */
+.searchTop{
+      width: 100%;
+      height: 100rpx;
+      display: flex;
+      justify-content: space-between;
+      padding: 0rpx 20rpx;
+      box-sizing: border-box;
+      padding-top: 10rpx;
+      background-color: #eee;
+}
+.searchTop image{
+      margin-top: 10rpx;
+      width: 60rpx;
+      height: 60rpx;
+}
+.searchTop input{
+      width: 100%;
+      height: 80rpx;
+      line-height: 80rpx;
+      padding: 0rpx 20rpx;
+      font-size: 14px;
+      color: #000;
+}
+/* 电影分类区 */
+.moviesClass{
+      padding: 30rpx 30rpx;
+}
+.moviesTitle{
+      margin-bottom: 30rpx;
+}
+.movieWord{
+      height: 50rpx;
+      line-height: 50rpx;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+}
+.movieWord text:last-child{
+      color: #1296db;
+}
+/* 电影小分类 */
+.movieFenShow{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding-top: 10rpx;
+      font-size: 12px;
+      color: #333;
+}
+.movie-show{
+      width: 200rpx;
+}
+.movie-show image{
+      width: 100%;
+      height: 270rpx;
+}
+.shenglue{
+      width: 200rpx;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+}
+/* 黄星 */
+.huang{
+      width: 20rpx;
+      height: 20rpx;
+      background-size:100% 100%;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAACEklEQVQ4jYXSP29cVRDG4WfOvV5viGW8CRIFkCL8EwUFNBSQJiXpQEhIlHwBkkggCuRvAKlpgJaCKlIERUpAApRIQIUoUBSkSBi0BpZd771nKHa9ibEdppwz72/mnTORN8+TqHNOFmoABTWfNek/Mdx4Uzu4ISsR1Mpkl1JQFBDok3Hyd2ES/FnYrdv6+pzZ5F39P/QT+imzv6j9ArjsZwVqkmEwbBh4RpOvKoW+f003eUru0U3oOuKu9CBEMpsz7ZnP33NvdM07coN+sLAf/gtZZvYfh+URWV+/2yDo6xuafkRd2diPVuYT5ON4GmdkPmZv/vyhysh1s+mXqh9wG7dk/oQfI78994vMMwcEmYcY98nfKkpsHyo+CnBkPmmb7SLiY1EuH636n2jioiY+ak1/Jb0v66OazYvaB8nueGG0dGPmf3ygxBVrrcjbHy4nS8ZfX7X73QXt5vGQbszWC9dsvfSykpSimN+hu0PdIWc3RHt/Cz2G5XsPn+ChhlFo7Xy6HDOow7OaDdTjIesjdm6e9ftXi+nRiq0lBJGn5L2A5fUd+NqKwSk5WFUVfdAHXVBjtNJCKZ+LeEtprq72BhmnKc3i4IvIb17cB26q/XjRaP0LrSuyXNNV2jXCef38krp3QQ2ibJHjpZ2Ty4XlngfW3nZi8LPd3z4TLTUXY2XStNet1eumo1fE/Emlm8iFxX8BAgLTdkvSIzoAAAAASUVORK5CYII=);
+      background-repeat: no-repeat;
+}
+/* 黑星 */
+.hei{
+      width: 20rpx;
+      height: 20rpx;
+      background-size:100% 100%;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAACAElEQVQ4jYWSPW4UQRCFv6rpWbweG2ETIhwYkEVAAEcgxBkBQiLkAvxIIALkG2DfALgAkSULAoekBPwEIAJkO1nJwcryeGbVXUXg7dWstZZf1tWqr9+rahkMBpgZ7s7i4iJdufud4XD4sdfrPS3L8puZoaqklGjbFlXF3QkARVHQNA2Hh4eo6gRiZhsictfM3pRl+cjdERFijJgZRVHg7shgMABgNBohIoQQEBHM7HaM8VcG9vv9tRDCbzPj+PgYgBACZoZyRjHG/NLbbr1t29dN03ByckJ2lKXAVGHs5lpK6XEXklJ6Mj8/v9SNmxXc/aa73wDWgBV3vx5jvCdd8in8Ul3XX1NKP0TkANhz9z/AT9nf3/8HrJzZCmcYedDMcLKnRVFsuPtUdRYAmAVARDZUVT+o6suZXRdIRJ4D73W8iXdmtmlm57rounR3UkqbMcatGCNydHSEmQHQNM1227brs2xnmRn9fn9nbm7uwSRmSonOTL5dFGH8U78vLCxQVRVVVRHqup7YNLPVi+KEEKjrejX3wek/AchulruQ81YNLHcPU+HdfWnqUvWzqj4Tke0cZQy+KiKFiCAiyMHBQe65bGZDd6coii/uvlWW5U4eOnAfeBFjXHd3VPUKMAQI2a6ZjXq93qsQwt+2bT/lVzvarapq18weNk1zy8wmQ/kP1ikffp1VN6oAAAAASUVORK5CYII=);
+      background-repeat: no-repeat;
+}
+.allstart{
+      height: 25rpx;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 12px;
+      margin-top: 15rpx;
+}
+.start-show{
+      height: 20rpx;
+      width: 20rpx;
+}
+.pingfen{
+      font-size: 12px;
+      line-height: 10rpx;
+      margin-left: 20rpx;
+      color: #1296db;
+}
+.word{
+      text-align: center;
+      font-size: 14px;
+      height: 80rpx;
+      line-height: 80rpx;
+      background-color: #1296db;
+      color: #fff;
+}
+#quanbu .movieFenShow{
+      display: flex;
+      flex-wrap:wrap;
+}
+.shang{
+      margin-bottom: 30rpx;
+}
